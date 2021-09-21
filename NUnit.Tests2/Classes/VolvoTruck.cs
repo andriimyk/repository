@@ -9,17 +9,20 @@ namespace NUnit.Tests2.Classes
 {
     public class VolvoTruck : Car, IDescription
     {
+        public string model;
+        public string color;
 
-        public Body Body { get; set; }
-        public Engine Engine { get; set; }
-        public List<Wheel> Wheel { get; set; }
 
         public VolvoTruck (VolvoTruckModel model, Color color, List<Wheel> wheel) : base(TypeOfCar.Truck, Factory.Volvo)
             {
-            Body.Name = "Volvo body";
-            Engine.engineName = "Volvo";
+            this.model = model.ToString();
+            this.color = color.ToString();
+            Body = new Body("Volvo Body");
+            Engine = new Engine("Volvo Engine");
             Wheel = wheel;
             }
+        
+
     }
 }
 

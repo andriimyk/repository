@@ -7,9 +7,10 @@ namespace NUnit.Tests2
 {
     public class Body : BaseDetail
     {
-        public Body(string name) : base(name, DetailType.Body)
+        public string bodyFactory;
+        public Body(string body) : base("Body", DetailType.Body)
         {
-            name = "Body";
+            bodyFactory = body;
         }
     }
 }

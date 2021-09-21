@@ -7,10 +7,10 @@ namespace NUnit.Tests2
 {
     public class Engine : BaseDetail
     {
-        public string engineName;
-        public Engine(string engineName) : base("Truck engine", DetailType.Engine)
+        public string engineFactory;
+        public Engine(string engine) : base("Truck engine", DetailType.Engine)
         {
-            this.engineName = engineName;
+            engineFactory = engine;
         }
     }
 }

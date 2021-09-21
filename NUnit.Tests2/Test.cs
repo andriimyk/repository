@@ -45,9 +45,12 @@ namespace NUnit.Tests2
         [Test]
         public void TestThree()
         {
+            Wheel one = new Wheel(1);
+            Wheel two = new Wheel(2);
+            Wheel three = new Wheel(3);
+            Wheel four = new Wheel(4);
 
-            List<Wheel> wheels = new List<Wheel>(6);
-       
+            List<Wheel> wheels = new List<Wheel> { one, two, three, four };
             VolvoTruck VolvoCar = new VolvoTruck(Enum.VolvoTruckModel.R420, Enum.Color.Orange, wheels);
         }
 
