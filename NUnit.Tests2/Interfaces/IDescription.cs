@@ -10,6 +10,6 @@ namespace NUnit.Tests2
     {
         Body Body { get; set; }
         Engine Engine { get; set; }
-        List<Wheel> Wheel { get; set; }
+        List<Wheel> Wheel { get; set; }// many WheelS
     }
 }

@@ -8,7 +8,7 @@ namespace NUnit.Tests2
     public class Engine : BaseDetail
     {
         public string engineFactory;
-        public Engine(string engine) : base("Truck engine", DetailType.Engine)
+        public Engine(string engine) : base("Truck engine", DetailType.Engine)//not truck engine. this should still universal
         {
             engineFactory = engine;
         }
