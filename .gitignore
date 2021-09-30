@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/NUnit.Tests2/bin/Debug
+/NUnit.Tests2/obj/Debug
+/NUnit.Tests2/obj/Release

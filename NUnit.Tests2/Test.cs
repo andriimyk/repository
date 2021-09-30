@@ -52,6 +52,22 @@ namespace NUnit.Tests2
 
             List<Wheel> wheels = new List<Wheel> { one, two, three, four };
             VolvoTruck VolvoCar = new VolvoTruck(Enum.VolvoTruckModel.R420, Enum.Color.Orange, wheels);
+
+            //still need to create wheels separately and fasten to the cart
+            //Factory is not ready
+            //
+            /*
+             * IFactory factory = new CarFactory();
+             * List<ICar> cars = new List <ICar>()
+             * cars.Add(factory.Produce(carType.Truck, carTypeModel.Volvo.R420, Color.Orange));
+             * cars.Add(factory.Produce(carType.Truck, carTypeModel.Scania.___, Color.Blue));
+             * Assert.IsTrue(cars.First().Wheels.Count==4);
+             * Assert.IsTrue(car.First().GetType()==typeof(VolvoTruck));
+             * Assert.IsTrue(cars.First().Wheels.Count==4);
+             * Assert.IsTrue(car.First().GetType()==typeof(ScaniaTruck));
+             * 
+             * 
+             */
         }
 
     }

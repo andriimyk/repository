@@ -13,7 +13,7 @@ namespace NUnit.Tests2.Classes
         public Factory Factory { get; set; }
         public Body Body { get; set; }
         public Engine Engine { get; set; }
-        public List<Wheel> Wheel { get; set; }
+        public List<Wheel> Wheel { get; set; }//Many WheelS
 
         public Car(TypeOfCar typeOfCar, Factory factory)
         {
