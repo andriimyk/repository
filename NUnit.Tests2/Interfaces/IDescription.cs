@@ -8,8 +8,8 @@ namespace NUnit.Tests2
 {
     public interface IDescription
     {
-        Body Body { get; set; }
-        Engine Engine { get; set; }
-        List<Wheel> Wheel { get; set; }// many WheelS
+        Body Body { set; }
+        Engine Engine { set; }
+        List<Wheel> Wheels { set; }// many WheelS
     }
 }

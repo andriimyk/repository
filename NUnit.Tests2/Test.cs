@@ -1,6 +1,8 @@
 ﻿using NUnit.Framework;
 using NUnit.Tests2.Abstracts;
 using NUnit.Tests2.Classes;
+using NUnit.Tests2.Enum;
+using NUnit.Tests2.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,29 +47,19 @@ namespace NUnit.Tests2
         [Test]
         public void TestThree()
         {
-            Wheel one = new Wheel(1);
-            Wheel two = new Wheel(2);
-            Wheel three = new Wheel(3);
-            Wheel four = new Wheel(4);
 
-            List<Wheel> wheels = new List<Wheel> { one, two, three, four };
-            VolvoTruck VolvoCar = new VolvoTruck(Enum.VolvoTruckModel.R420, Enum.Color.Orange, wheels);
+            Factory factory = new Factory("Some factory");
 
-            //still need to create wheels separately and fasten to the cart
-            //Factory is not ready
-            //
-            /*
-             * IFactory factory = new CarFactory();
-             * List<ICar> cars = new List <ICar>()
-             * cars.Add(factory.Produce(carType.Truck, carTypeModel.Volvo.R420, Color.Orange));
-             * cars.Add(factory.Produce(carType.Truck, carTypeModel.Scania.___, Color.Blue));
-             * Assert.IsTrue(cars.First().Wheels.Count==4);
-             * Assert.IsTrue(car.First().GetType()==typeof(VolvoTruck));
-             * Assert.IsTrue(cars.First().Wheels.Count==4);
-             * Assert.IsTrue(car.First().GetType()==typeof(ScaniaTruck));
-             * 
-             * 
-             */
+            CarCarcass volvoCarcass = new CarCarcass(TypeOfCar.Truck, FactoryList.Volvo);
+
+            List<ICar> cars = new List<ICar>();
+            cars.Add(factory.Produce(VolvoTruckModel.R420, Color.Green));
+            cars.Add(factory.Produce(ScaniaTruckModel.R420, Color.Orange));
+            Assert.IsTrue(cars.First().Wheels.Count == 4);
+            Assert.IsTrue(cars.First().GetType()==typeof(VolvoTruck));
+            Assert.IsTrue(cars[1].Body.Name == "Scania body");
+            Assert.IsTrue(cars[1].Color.ToString() == "Orange");
+
         }
 
     }

@@ -40,20 +40,26 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstracts\AbstractCar.cs" />
     <Compile Include="Abstracts\BaseDetail.cs" />
+    <Compile Include="Classes\Car.cs" />
     <Compile Include="Abstracts\Machine.cs" />
     <Compile Include="Classes\Body.cs" />
-    <Compile Include="Abstracts\Car.cs" />
+    <Compile Include="Classes\CarCarcass.cs" />
+    <Compile Include="Classes\Factory.cs" />
+    <Compile Include="Classes\ScaniaTruck.cs" />
+    <Compile Include="Interfaces\ICar.cs" />
     <Compile Include="Classes\VolvoTruck.cs" />
     <Compile Include="Enum\Color.cs" />
-    <Compile Include="Enum\Factory.cs" />
-    <Compile Include="Enum\ScaniaTruck.cs" />
+    <Compile Include="Enum\FactoryList.cs" />
+    <Compile Include="Enum\ScaniaTruckList.cs" />
     <Compile Include="Enum\TypeOfCar.cs" />
     <Compile Include="Enum\DetailType.cs" />
     <Compile Include="Classes\Engine.cs" />
     <Compile Include="Enum\VolvoTruck.cs" />
     <Compile Include="Interfaces\ICommonType.cs" />
     <Compile Include="Interfaces\IDescription.cs" />
+    <Compile Include="Interfaces\IFactory.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Classes\Wheel.cs" />
   </ItemGroup>

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace NUnit.Tests2.Enum
 {
-    public enum ScaniaTruck
+    public enum FactoryList
     {
-        P380, R420, 
+        Volvo, Scania
     }
 }
